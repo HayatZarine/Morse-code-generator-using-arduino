@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Zarine Hayat",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 29.4, "left": 153, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": -36, "left": -75, "attrs": { "volume": "0.1" } },
+    { "type": "wokwi-led", "id": "led1", "top": -42, "left": 119, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -15.25,
+      "left": 38.4,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "bz1:2", "uno:8", "green", [ "v0" ] ],
+    [ "bz1:1", "uno:GND.1", "green", [ "v0" ] ],
+    [ "led1:A", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "uno:13", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.2", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
